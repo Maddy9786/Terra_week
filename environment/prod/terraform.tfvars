@@ -13,6 +13,12 @@ rgs = {
     name     = "prac3_rg"
     location = "centralindia"
   }
+  
+   rg4 = {
+    name     = "prac4_rg"
+    location = "centralindia"
+  }
+
 
 }
 
