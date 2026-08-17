@@ -59,4 +59,4 @@ jobs:
 
         - name : Terraform destroy once infra created
           working-directory: environment/prod
-          run: terraform destory --auto-approve
+          run: terraform destroy --auto-approve
