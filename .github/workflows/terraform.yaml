@@ -56,3 +56,7 @@ jobs:
         # - name: Terraform Output
         #   working-directory: environment/prod
         #   run: terraform output  
+
+        - name : Terraform destroy once infra created
+          working-directory: environment/prod
+          run: terraform destory --auto-approve
