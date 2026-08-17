@@ -3,7 +3,7 @@ rgs = {
     name     = "prac_rg"
     location = "centralindia"
   }
-  
+
 }
 
 sa = {
