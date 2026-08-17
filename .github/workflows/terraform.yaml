@@ -4,7 +4,11 @@ on:
     push:
         branches:
             - main
-            - feature
+            - 'feature/**'
+
+     pull_request:
+        branches:
+          - main        
 
     workflow_dispatch:        
 
@@ -47,11 +51,12 @@ jobs:
 
         - name: terraform plan
           working-directory: environment/prod
-          run: terraform plan
+          run: terraform plan -input=false
 
         - name: terraform apply
+          if: github.event_name == 'push' && github.ref == 'refs/heads/main'
           working-directory: environment/prod
-          run: terraform apply --auto-approve
+          run: terraform apply --auto-approve -input=false
 
         # - name: Terraform Output
         #   working-directory: environment/prod
