@@ -17,7 +17,7 @@ jobs:
         - name: code checjkout
           uses: actions/checkout@v4
 
-        # - name: Setup Terraform
+        - name: Setup Terraform
           uses: hashicorp/setup-terraform@v3  
 
         - name: terraform initialization
