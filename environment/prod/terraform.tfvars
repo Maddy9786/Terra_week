@@ -9,6 +9,11 @@ rgs = {
     location = "centralindia"
   }
 
+  rg3 = {
+    name     = "prac3_rg"
+    location = "centralindia"
+  }
+
 }
 
 sa = {
