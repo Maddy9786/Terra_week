@@ -1,0 +1,6 @@
+variable "sa" {
+}
+
+variable "rgs" {
+
+}

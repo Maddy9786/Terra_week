@@ -1,0 +1,45 @@
+name: This is Iac build and deploy pipeline for creating resource 
+
+on:
+    push:
+        branches:
+            - main
+            - feature
+
+    workflow_dispatch:        
+
+jobs:
+    
+    terraform:
+      runs-on : ubuntu-latest
+
+      steps:
+        - name: code checjkout
+          uses: actions/checkout@v4
+
+        # - name: Setup Terraform
+          uses: hashicorp/setup-terraform@v3  
+
+        - name: terraform initialization
+          working-directory: environment/prod
+          run: terraform init
+         
+        - name: terraform format correct
+          working-directory: environment/prod
+          run: terraform fmt -check
+        
+        - name: terraform validate
+          working-directory: environment/prod
+          run: terraform validate
+
+        - name: terraform plan
+          working-directory: environment/prod
+          run: terraform plan
+
+        - name: terraform apply
+          working-directory: environment/prod
+          run: terraform apply --auto-approve
+
+        # - name: Terraform Output
+        #   working-directory: environment/prod
+        #   run: terraform output  
