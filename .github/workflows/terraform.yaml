@@ -39,7 +39,7 @@ jobs:
          
         - name: terraform format correct
           working-directory: environment/prod
-          run: terraform fmt -check
+          run: terraform fmt -check -recursive
         
         - name: terraform validate
           working-directory: environment/prod
