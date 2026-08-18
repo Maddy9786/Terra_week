@@ -14,6 +14,12 @@ rgs = {
     location = "centralindia"
   }
 
+  rg4 = {
+    name     = "prac4_rg"
+    location = "centralindia"
+  }
+
+
 }
 
 sa = {

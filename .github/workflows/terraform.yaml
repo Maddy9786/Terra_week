@@ -43,7 +43,7 @@ jobs:
          
         - name: terraform format correct
           working-directory: environment/prod
-          run: terraform fmt -check -recursive
+          run: terraform fmt -check --recursive
         
         - name: terraform validate
           working-directory: environment/prod
@@ -62,6 +62,6 @@ jobs:
         #   working-directory: environment/prod
         #   run: terraform output  
 
-        - name : Terraform destroy once infra created
-          working-directory: environment/prod
-          run: terraform destroy --auto-approve
+        # - name : Terraform destroy once infra created
+        #   working-directory: environment/prod
+        #   run: terraform destroy --auto-approve
