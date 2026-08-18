@@ -18,7 +18,7 @@ rgs = {
     name     = "prac4_rg"
     location = "centralindia"
   }
-  
+
   rg5 = {
     name     = "prac5_rg"
     location = "centralindia"
